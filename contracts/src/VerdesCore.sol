@@ -41,7 +41,6 @@ contract VerdesCore {
         require(_price > 0, "Price must be greater than 0");
         require(_quantity > 0, "Quantity must be greater than 0");
         require(_tokenAddress != address(0), "Invalid token address");
-        require(_feePercent >= 0 && _feePercent <= 1000, "Invalid fee percentage");
 
         totalDeals++;
         deals.push(Deal({
@@ -60,7 +59,7 @@ contract VerdesCore {
 
         IERC20(_tokenAddress).transferFrom(_depositor, address(this), _quantity);
 
-        emit DealCreated(totalDeals, _depositor, _receiver, _price, _quantity, _tokenAddress, _feePercent);
+        emit DealCreated(totalDeals, _depositor, _receiver, _price, _quantity, _tokenAddress, feePercentage);
     }
 
     //Called after the reciever has given the depositor cash IRL. Now the depositor can releas their tokens.
