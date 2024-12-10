@@ -1,5 +1,10 @@
-# React example of minikit
+# Verdes
+Verdes is slang for dollars in some Latin countries. 
 
+The Verdes app connects users who want to onramp and offramp crypto.
+
+
+## Using this repo
 Apart from a frontend, you'll need a backend, this template contains an example of that as well
 
 ## To run, install:
